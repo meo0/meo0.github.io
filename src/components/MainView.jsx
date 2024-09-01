@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid2';
 
 import { ProfilesErea } from "./ProfilesErea";
+import { InfoErea } from "./InfoErea";
 
 export const MainView = () => {
     return (
@@ -13,7 +14,7 @@ export const MainView = () => {
                         <ProfilesErea />
                     </Grid>
                     <Grid size={9}>
-                        <Box sx={{bgcolor:'lightcoral'}}>ocian</Box>
+                        <InfoErea/>
                     </Grid>
                 </Grid>
             </Box>
