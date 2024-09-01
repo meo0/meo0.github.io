@@ -12,7 +12,8 @@ export default function ProjectCard({name, imgId, description, link}) {
     window.location.href = link;
   }
   return (
-    <Card sx={{ maxWidth: 345, m:1}}>
+    <Box sx={{m:1}}>  
+    <Card sx={{ maxWidth: 288,}}>
       <CardActionArea onClick={handleCardClick}>
         <CardMedia
           component="img"
@@ -31,6 +32,7 @@ export default function ProjectCard({name, imgId, description, link}) {
         </CardContent>
       </CardActionArea>
     </Card>
+    </Box>
   );
 }
 
@@ -38,11 +40,11 @@ export const ProjectContainer = ({title}) => {
     const projectcardlist = projects.map(project => 
         <ProjectCard key={project.id} name={project.name} imgId={project.imgId} description={project.description} link={project.link} />);
     return (
-        <>
+        <Box sx={{widows:'100%', pt:15}}>
             <Box sx={{color:'gray', typography: 'subtitle2'}}>{title}</Box>
-            <Box sx={{display:'inline-flex'}}>
+            <Box sx={{display:'flex', flexWrap:'wrap', maxWidth:'100%', p:1, m:1}}>
                 {projectcardlist}
             </Box>
-        </>
+        </Box>
     )
 }

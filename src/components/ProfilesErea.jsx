@@ -38,7 +38,7 @@ const GitHubUserProfile = ({ username }) => {
 
   return (
     <div>
-      <Avatar src={userData.avatar_url} alt={`${username}'s avatar`} sx={{width:'100%', height:'100%'}} />
+      <Avatar src={userData.avatar_url} alt={`${username}'s avatar`} sx={{maxWidth:250, maxHeight:250,width:'100%', height:'100%'}} />
       <h2>{userData.name || 'No name provided'}</h2>
       <p>{userData.bio || 'No bio available'}</p>
       {/*<p>Followers: {userData.followers}</p>
