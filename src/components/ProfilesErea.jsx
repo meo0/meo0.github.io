@@ -2,6 +2,7 @@ import {useState, useEffect} from 'react';
 import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
 
+
 import GitHubIcon from '@mui/icons-material/GitHub';
 
 const GitHubUserProfile = ({ username }) => {
@@ -53,7 +54,7 @@ const GitHubUserProfile = ({ username }) => {
 
 export const ProfilesErea = () => {
     return (
-        <Box sx={{mt:10}}>
+        <Box sx={{mt:5}}>
             <GitHubUserProfile username={'meo0'}/>
         </Box>
     )

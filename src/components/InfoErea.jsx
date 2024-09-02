@@ -5,7 +5,10 @@ import { EducationContainer } from './EducationContainer';
 
 export const InfoErea = () => {
     return (
-        <Box>
+        <Box
+            sx={{
+            }}
+        >
             <ProjectContainer />
             <EducationContainer />
         </Box>
