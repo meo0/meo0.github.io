@@ -5,9 +5,11 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import CardActionArea from '@mui/material/CardActionArea';
 
-import {projects} from './Data'
+import { education } from './Data'
 
-export function ProjectCard({name, imgId, description, link}) {
+
+
+export const EduCard = ({link, imgId,name,description}) => {
   const handleCardClick = () => {
     window.location.href = link;
   }
@@ -20,7 +22,7 @@ export function ProjectCard({name, imgId, description, link}) {
           height="140"
           image={`/img/${imgId}`}
           alt={`${name}`}
-          sx={{ objectFit: 'cover', objectPosition: 'top' }}
+          sx={{ objectFit: 'cover',}}
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
@@ -34,17 +36,17 @@ export function ProjectCard({name, imgId, description, link}) {
     </Card>
     </Box>
   );
+
 }
 
-export const ProjectContainer = () => {
-    const projectcardlist = projects.map(project => 
-        <ProjectCard key={project.id} name={project.name} imgId={project.imgId} description={project.description} link={project.link} />);
+export const EducationContainer = () => {
+    const eduCardList = education.map(edu => <EduCard key={edu.id} link={edu.link} imgId={edu.imgId} name={edu.name} description={edu.description} />);
     return (
-        <Box sx={{widows:'100%', pt:15}}>
-            <Box sx={{color:'gray', typography: 'subtitle2'}}>projects</Box>
+        <Box>
+            <Box sx={{color:'gray', typography: 'subtitle2'}}>education</Box>
             <Box sx={{display:'flex', flexWrap:'wrap', maxWidth:'100%', p:1, m:1}}>
-                {projectcardlist}
+                {eduCardList}
             </Box>
         </Box>
-    )
+    );
 }

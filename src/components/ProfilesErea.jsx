@@ -45,7 +45,7 @@ const GitHubUserProfile = ({ username }) => {
       <p>Following: {userData.following}</p>
       <p>Public Repos: {userData.public_repos}</p>*/}
       <a href={userData.html_url} target="_blank" rel="noopener noreferrer">
-        <GitHubIcon/>
+        <GitHubIcon sx={{color:'black'}}/>
       </a>
     </div>
   );
@@ -53,7 +53,7 @@ const GitHubUserProfile = ({ username }) => {
 
 export const ProfilesErea = () => {
     return (
-        <Box>
+        <Box sx={{mt:10}}>
             <GitHubUserProfile username={'meo0'}/>
         </Box>
     )
