@@ -5,13 +5,15 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import CardActionArea from '@mui/material/CardActionArea';
 
-import { education } from './Data'
+import { education, learning } from './Data'
 
 
 
 export const EduCard = ({link, imgId,name,description}) => {
   const handleCardClick = () => {
+    if(link !== ''){
     window.location.href = link;
+    }
   }
   return (
     <Box sx={{m:1}}>  
@@ -22,7 +24,7 @@ export const EduCard = ({link, imgId,name,description}) => {
           height="140"
           image={`/img/${imgId}`}
           alt={`${name}`}
-          sx={{ objectFit: 'cover',}}
+          sx={{ objectFit: 'contain',}}
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
@@ -49,4 +51,16 @@ export const EducationContainer = () => {
             </Box>
         </Box>
     );
+}
+
+export const LearningContainer = () => {
+  const lerningCardList = learning.map(learning => <EduCard key={learning.id} link={learning.link} imgId={learning.imgId} name={learning.name} description={learning.description} />);
+  return (
+    <Box>
+        <Box sx={{color:'gray', typography: 'subtitle2'}}>learning</Box>
+        <Box sx={{display:'flex', flexWrap:'wrap', maxWidth:'100%', p:1, m:1}}>
+            {lerningCardList}
+        </Box>
+    </Box>
+  )
 }

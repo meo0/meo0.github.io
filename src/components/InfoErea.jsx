@@ -1,6 +1,6 @@
 import Box from '@mui/material/Box';
 import { ProjectContainer } from './ProjectContainer';
-import { EducationContainer } from './EducationContainer';
+import { EducationContainer, LearningContainer } from './EducationContainer';
 
 
 export const InfoErea = () => {
@@ -11,6 +11,7 @@ export const InfoErea = () => {
         >
             <ProjectContainer />
             <EducationContainer />
+            <LearningContainer />
         </Box>
     )
 }

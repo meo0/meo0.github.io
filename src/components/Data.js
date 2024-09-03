@@ -19,3 +19,28 @@ export const education = [{
     description: '2021-April ~ 2024-March ・Math and Science  ・Karatedo club Captain',
     link:'http://www.koryo946.hokkaido-c.ed.jp/zen'
 }]
+
+export const skills = [{
+
+}]
+
+export const learning = [{
+    id:0,
+    imgId:'logo192.png',
+    name:'Web Development',
+    description:'HTML, CSS, JAVASCRIPT, React',
+    link:'https://reactjs.org/'
+},{
+    id:1,
+    imgId:'tensorflow-2.svg',
+    name:'AI',
+    description:'Python, TensorFlow, Keras, numpy, matoplotlib',
+    link:''
+},{
+    id:2,
+    imgId:'UnityLogo_White_In_BlackBG.gif',
+    name:'Unity',
+    description:'C#',
+    link:'https://unity.com/'
+}
+]
