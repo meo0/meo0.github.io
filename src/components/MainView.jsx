@@ -7,9 +7,9 @@ import { InfoErea } from "./InfoErea";
 
 export const MainView = () => {
     return (
-        <div style={{}}>
-            <Box sx={{maxWidth: '1280px', mx:'auto'}}>
-                <Grid container spacing={0.5} sx={{height:'100vh'}}>
+        <Box sx={{height:'100vh'}}>
+            <Box sx={{maxWidth: '1280px', mx:'auto', height:'100%'}}>
+                <Grid container spacing={0.5} sx={{height:'100%'}}>
                     <Grid size={3} sx={{}}>
                         <ProfilesErea />
                     </Grid>
@@ -25,6 +25,6 @@ export const MainView = () => {
                     </Grid>
                 </Grid>
             </Box>
-        </div>
+        </Box>
     )
 }

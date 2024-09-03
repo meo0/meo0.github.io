@@ -16,7 +16,7 @@ export const education = [{
     id:1,
     imgId:'koryo.jpg',
     name:'Kushiro Koryo High School',
-    description: '2021-April ~ 2024-March ・Math and Science  ・Karatedo club Captain',
+    description: '2021-April ~ 2024-March ・Math and Science Course ・Karatedo club Captain',
     link:'http://www.koryo946.hokkaido-c.ed.jp/zen'
 }]
 
