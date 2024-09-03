@@ -1,10 +1,11 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid2';
 import { ThemeProvider, createTheme, useColorScheme } from "@mui/material/styles";
 
 import { ProfilesErea } from "./ProfilesErea";
 import { InfoErea } from "./InfoErea";
+import { LanguageContext, LanguageProvider } from "./SettingsContainer";
 
 const theme = createTheme({
     colorSchemes: {
@@ -13,6 +14,7 @@ const theme = createTheme({
 });
 
 export const MainView = () => {
+    const language = useContext(LanguageContext);
     return (
         <ThemeProvider theme={theme}>
         <Box sx={{height:'100vh', bgcolor:'background.default', color:'text.primary'}}>

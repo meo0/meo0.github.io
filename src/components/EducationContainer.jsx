@@ -1,3 +1,4 @@
+import {useContext} from 'react';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -6,6 +7,7 @@ import Typography from '@mui/material/Typography';
 import CardActionArea from '@mui/material/CardActionArea';
 
 import { education, learning } from './Data'
+import { LanguageContext } from './SettingsContainer';
 
 
 
@@ -42,7 +44,9 @@ export const EduCard = ({link, imgId,name,description}) => {
 }
 
 export const EducationContainer = () => {
-    const eduCardList = education.map(edu => <EduCard key={edu.id} link={edu.link} imgId={edu.imgId} name={edu.name} description={edu.description} />);
+    const {language} = useContext(LanguageContext);
+    const educationData = education[language] || [];
+    const eduCardList = educationData.map(edu => <EduCard key={edu.id} link={edu.link} imgId={edu.imgId} name={edu.name} description={edu.description} />);
     return (
         <Box>
             <Box sx={{color:'gray', typography: 'subtitle2'}}>education</Box>
@@ -54,7 +58,9 @@ export const EducationContainer = () => {
 }
 
 export const LearningContainer = () => {
-  const lerningCardList = learning.map(learning => <EduCard key={learning.id} link={learning.link} imgId={learning.imgId} name={learning.name} description={learning.description} />);
+  const {language} = useContext(LanguageContext);
+  const learningData = learning[`${language}`] || [];
+  const lerningCardList = learningData.map(learning => <EduCard key={learning.id} link={learning.link} imgId={learning.imgId} name={learning.name} description={learning.description} />);
   return (
     <Box>
         <Box sx={{color:'gray', typography: 'subtitle2'}}>learning</Box>
