@@ -46,7 +46,7 @@ const GitHubUserProfile = ({ username }) => {
       <p>Following: {userData.following}</p>
       <p>Public Repos: {userData.public_repos}</p>*/}
       <a href={userData.html_url} target="_blank" rel="noopener noreferrer">
-        <GitHubIcon sx={{color:'black'}}/>
+        <GitHubIcon sx={{color:'text.secondary'}}/>
       </a>
     </div>
   );

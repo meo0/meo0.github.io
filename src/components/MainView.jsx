@@ -1,13 +1,21 @@
 import { useState } from "react"
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid2';
+import { ThemeProvider, createTheme, useColorScheme } from "@mui/material/styles";
 
 import { ProfilesErea } from "./ProfilesErea";
 import { InfoErea } from "./InfoErea";
 
+const theme = createTheme({
+    colorSchemes: {
+        dark: true,
+    },
+});
+
 export const MainView = () => {
     return (
-        <Box sx={{height:'100vh'}}>
+        <ThemeProvider theme={theme}>
+        <Box sx={{height:'100vh', bgcolor:'background.default', color:'text.primary'}}>
             <Box sx={{maxWidth: '1280px', mx:'auto', height:'100%'}}>
                 <Grid container spacing={0.5} sx={{height:'100%'}}>
                     <Grid size={3} sx={{}}>
@@ -26,5 +34,6 @@ export const MainView = () => {
                 </Grid>
             </Box>
         </Box>
+        </ThemeProvider>
     )
 }
